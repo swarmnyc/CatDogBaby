@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		
 		// Set up window
 		window = UIWindow()
-		window!.rootViewController = ViewController()
+		window!.rootViewController = CameraViewController()
 		window!.makeKeyAndVisible()
 		
 		return true

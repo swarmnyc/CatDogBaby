@@ -9,10 +9,18 @@
 /* Begin PBXBuildFile section */
 		C2BBD49C828ECFC0ECE2E300 /* Pods_CatDogBabyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD4B8D9B39BB92B5262F3389 /* Pods_CatDogBabyTests.framework */; };
 		C403B11C1E7CD57500929E09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C403B11B1E7CD57500929E09 /* AppDelegate.swift */; };
-		C403B11E1E7CD57500929E09 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C403B11D1E7CD57500929E09 /* ViewController.swift */; };
 		C403B1231E7CD57500929E09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C403B1221E7CD57500929E09 /* Assets.xcassets */; };
 		C403B1261E7CD57500929E09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C403B1241E7CD57500929E09 /* LaunchScreen.storyboard */; };
 		C403B1311E7CD57500929E09 /* CatDogBabyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C403B1301E7CD57500929E09 /* CatDogBabyTests.swift */; };
+		C42DDCFA1E7DEE550087EB43 /* Telekinesis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C42DDCF81E7DEE2D0087EB43 /* Telekinesis.framework */; };
+		C42DDCFB1E7DEE550087EB43 /* Telekinesis.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C42DDCF81E7DEE2D0087EB43 /* Telekinesis.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C42DDD011E7DF4CA0087EB43 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42DDD001E7DF4CA0087EB43 /* Animal.swift */; };
+		C42DDD061E7E00370087EB43 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42DDD051E7E00370087EB43 /* DataManager.swift */; };
+		C42DDD081E7E00540087EB43 /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42DDD071E7E00540087EB43 /* Secret.swift */; };
+		C4EEA55F1E7CE9D500650E2E /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EEA55E1E7CE9D500650E2E /* CameraViewController.swift */; };
+		C4EEA5611E7DDDF800650E2E /* CaptureButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EEA5601E7DDDF800650E2E /* CaptureButton.swift */; };
+		C4EEA5631E7DDE4200650E2E /* StyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EEA5621E7DDE4200650E2E /* StyleKit.swift */; };
+		C4EEA5651E7DE80F00650E2E /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EEA5641E7DE80F00650E2E /* CloseButton.swift */; };
 		E03B2D9CE7EBE7713E2B43CB /* Pods_CatDogBaby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA7DE533488DDDB5E7DC372 /* Pods_CatDogBaby.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,19 +34,40 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		C42DDCFC1E7DEE550087EB43 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C42DDCFB1E7DEE550087EB43 /* Telekinesis.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		6C7D7719448357F105B123F8 /* Pods-CatDogBabyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatDogBabyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CatDogBabyTests/Pods-CatDogBabyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		809DB891FA34242F8A7E9057 /* Pods-CatDogBaby.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatDogBaby.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CatDogBaby/Pods-CatDogBaby.debug.xcconfig"; sourceTree = "<group>"; };
 		ADA7DE533488DDDB5E7DC372 /* Pods_CatDogBaby.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatDogBaby.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C403B1181E7CD57500929E09 /* CatDogBaby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatDogBaby.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C403B11B1E7CD57500929E09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C403B11D1E7CD57500929E09 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C403B1221E7CD57500929E09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C403B1251E7CD57500929E09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C403B1271E7CD57500929E09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C403B12C1E7CD57500929E09 /* CatDogBabyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatDogBabyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C403B1301E7CD57500929E09 /* CatDogBabyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDogBabyTests.swift; sourceTree = "<group>"; };
 		C403B1321E7CD57500929E09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C42DDCF81E7DEE2D0087EB43 /* Telekinesis.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Telekinesis.framework; path = Frameworks/Telekinesis.framework; sourceTree = "<group>"; };
+		C42DDD001E7DF4CA0087EB43 /* Animal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
+		C42DDD051E7E00370087EB43 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		C42DDD071E7E00540087EB43 /* Secret.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
+		C4EEA55E1E7CE9D500650E2E /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		C4EEA5601E7DDDF800650E2E /* CaptureButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptureButton.swift; sourceTree = "<group>"; };
+		C4EEA5621E7DDE4200650E2E /* StyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleKit.swift; sourceTree = "<group>"; };
+		C4EEA5641E7DE80F00650E2E /* CloseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		CB380B8AE5D167E5E1B1C638 /* Pods-CatDogBabyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatDogBabyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CatDogBabyTests/Pods-CatDogBabyTests.release.xcconfig"; sourceTree = "<group>"; };
 		DA6A7EA1D510BC04FCEA4C07 /* Pods-CatDogBaby.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatDogBaby.release.xcconfig"; path = "Pods/Target Support Files/Pods-CatDogBaby/Pods-CatDogBaby.release.xcconfig"; sourceTree = "<group>"; };
 		DD4B8D9B39BB92B5262F3389 /* Pods_CatDogBabyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatDogBabyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +79,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E03B2D9CE7EBE7713E2B43CB /* Pods_CatDogBaby.framework in Frameworks */,
+				C42DDCFA1E7DEE550087EB43 /* Telekinesis.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +97,7 @@
 		43406F81244864E7BA2DDF94 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C42DDCF81E7DEE2D0087EB43 /* Telekinesis.framework */,
 				ADA7DE533488DDDB5E7DC372 /* Pods_CatDogBaby.framework */,
 				DD4B8D9B39BB92B5262F3389 /* Pods_CatDogBabyTests.framework */,
 			);
@@ -96,11 +127,11 @@
 		C403B11A1E7CD57500929E09 /* CatDogBaby */ = {
 			isa = PBXGroup;
 			children = (
-				C403B11B1E7CD57500929E09 /* AppDelegate.swift */,
-				C403B11D1E7CD57500929E09 /* ViewController.swift */,
-				C403B1221E7CD57500929E09 /* Assets.xcassets */,
-				C403B1241E7CD57500929E09 /* LaunchScreen.storyboard */,
-				C403B1271E7CD57500929E09 /* Info.plist */,
+				C42DDCFE1E7DF4A40087EB43 /* Model */,
+				C42DDCFF1E7DF4AA0087EB43 /* View */,
+				C42DDCFD1E7DF49F0087EB43 /* Controller */,
+				C42DDD041E7E00170087EB43 /* Data */,
+				C42DDD021E7DF5110087EB43 /* Supporting Files */,
 			);
 			path = CatDogBaby;
 			sourceTree = "<group>";
@@ -112,6 +143,52 @@
 				C403B1321E7CD57500929E09 /* Info.plist */,
 			);
 			path = CatDogBabyTests;
+			sourceTree = "<group>";
+		};
+		C42DDCFD1E7DF49F0087EB43 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C403B11B1E7CD57500929E09 /* AppDelegate.swift */,
+				C4EEA55E1E7CE9D500650E2E /* CameraViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		C42DDCFE1E7DF4A40087EB43 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C42DDD001E7DF4CA0087EB43 /* Animal.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C42DDCFF1E7DF4AA0087EB43 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C4EEA5641E7DE80F00650E2E /* CloseButton.swift */,
+				C4EEA5601E7DDDF800650E2E /* CaptureButton.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		C42DDD021E7DF5110087EB43 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C403B1271E7CD57500929E09 /* Info.plist */,
+				C403B1241E7CD57500929E09 /* LaunchScreen.storyboard */,
+				C403B1221E7CD57500929E09 /* Assets.xcassets */,
+				C4EEA5621E7DDE4200650E2E /* StyleKit.swift */,
+				C42DDD071E7E00540087EB43 /* Secret.swift */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C42DDD041E7E00170087EB43 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				C42DDD051E7E00370087EB43 /* DataManager.swift */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 		FAAA9CC9B431CAF1171FDF6B /* Pods */ = {
@@ -138,6 +215,7 @@
 				C403B1161E7CD57400929E09 /* Resources */,
 				328E627BCB22D61565069230 /* [CP] Embed Pods Frameworks */,
 				39E849629739F566BFC071BE /* [CP] Copy Pods Resources */,
+				C42DDCFC1E7DEE550087EB43 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -328,8 +406,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C403B11E1E7CD57500929E09 /* ViewController.swift in Sources */,
+				C4EEA5651E7DE80F00650E2E /* CloseButton.swift in Sources */,
 				C403B11C1E7CD57500929E09 /* AppDelegate.swift in Sources */,
+				C4EEA5611E7DDDF800650E2E /* CaptureButton.swift in Sources */,
+				C42DDD061E7E00370087EB43 /* DataManager.swift in Sources */,
+				C4EEA5631E7DDE4200650E2E /* StyleKit.swift in Sources */,
+				C42DDD081E7E00540087EB43 /* Secret.swift in Sources */,
+				C4EEA55F1E7CE9D500650E2E /* CameraViewController.swift in Sources */,
+				C42DDD011E7DF4CA0087EB43 /* Animal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,6 +546,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = TWPE6ND5AF;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = CatDogBaby/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.WilliamRobinson.CatDogBaby;
@@ -476,6 +564,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = TWPE6ND5AF;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = CatDogBaby/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.WilliamRobinson.CatDogBaby;

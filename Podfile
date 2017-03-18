@@ -5,7 +5,8 @@ platform :ios, '9.3'
 target 'CatDogBaby' do
   use_frameworks!
   pod 'SnapKit'
-  pod 'CameraEngine'
+  pod 'SwiftyCam'
+  pod 'SwiftyJSON'
 
   # Test targets
   target 'CatDogBabyTests' do

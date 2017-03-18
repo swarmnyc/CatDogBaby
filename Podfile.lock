@@ -1,12 +1,18 @@
 PODS:
   - SnapKit (3.2.0)
+  - SwiftyCam (2.1.0)
+  - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - SnapKit
+  - SwiftyCam
+  - SwiftyJSON
 
 SPEC CHECKSUMS:
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
+  SwiftyCam: 2f13473f67afa4658bff79453d7db6890e2fa84d
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: fd8c25b4091451d22f4ec90cf92842b23c0d7560
+PODFILE CHECKSUM: e3da4d578080c42d790746c5e690285a0cd8d572
 
 COCOAPODS: 1.2.1.beta.1
