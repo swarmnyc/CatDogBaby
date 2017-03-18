@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0820"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C403B1171E7CD57400929E09"
-               BuildableName = "CatDogBaby.app"
-               BlueprintName = "CatDogBaby"
-               ReferencedContainer = "container:CatDogBaby.xcodeproj">
+               BlueprintIdentifier = "972CFDA0604214BE1E94145BAA07D370"
+               BuildableName = "Pods_CatDogBabyTests.framework"
+               BlueprintName = "Pods-CatDogBabyTests"
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,26 +28,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C403B12B1E7CD57500929E09"
-               BuildableName = "CatDogBabyTests.xctest"
-               BlueprintName = "CatDogBabyTests"
-               ReferencedContainer = "container:CatDogBaby.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C403B1171E7CD57400929E09"
-            BuildableName = "CatDogBaby.app"
-            BlueprintName = "CatDogBaby"
-            ReferencedContainer = "container:CatDogBaby.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -61,16 +42,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C403B1171E7CD57400929E09"
-            BuildableName = "CatDogBaby.app"
-            BlueprintName = "CatDogBaby"
-            ReferencedContainer = "container:CatDogBaby.xcodeproj">
+            BlueprintIdentifier = "972CFDA0604214BE1E94145BAA07D370"
+            BuildableName = "Pods_CatDogBabyTests.framework"
+            BlueprintName = "Pods-CatDogBabyTests"
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -80,16 +60,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C403B1171E7CD57400929E09"
-            BuildableName = "CatDogBaby.app"
-            BlueprintName = "CatDogBaby"
-            ReferencedContainer = "container:CatDogBaby.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
