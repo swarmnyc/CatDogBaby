@@ -7,11 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C2BBD49C828ECFC0ECE2E300 /* Pods_CatDogBabyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD4B8D9B39BB92B5262F3389 /* Pods_CatDogBabyTests.framework */; };
 		C403B11C1E7CD57500929E09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C403B11B1E7CD57500929E09 /* AppDelegate.swift */; };
 		C403B1231E7CD57500929E09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C403B1221E7CD57500929E09 /* Assets.xcassets */; };
 		C403B1261E7CD57500929E09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C403B1241E7CD57500929E09 /* LaunchScreen.storyboard */; };
-		C403B1311E7CD57500929E09 /* CatDogBabyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C403B1301E7CD57500929E09 /* CatDogBabyTests.swift */; };
 		C42DDD011E7DF4CA0087EB43 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42DDD001E7DF4CA0087EB43 /* Animal.swift */; };
 		C42DDD061E7E00370087EB43 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42DDD051E7E00370087EB43 /* DataManager.swift */; };
 		C42DDD081E7E00540087EB43 /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42DDD071E7E00540087EB43 /* Secret.swift */; };
@@ -21,16 +19,6 @@
 		C4EEA5651E7DE80F00650E2E /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EEA5641E7DE80F00650E2E /* CloseButton.swift */; };
 		E03B2D9CE7EBE7713E2B43CB /* Pods_CatDogBaby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA7DE533488DDDB5E7DC372 /* Pods_CatDogBaby.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		C403B12D1E7CD57500929E09 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C403B1101E7CD57400929E09 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C403B1171E7CD57400929E09;
-			remoteInfo = CatDogBaby;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		C42DDCFC1E7DEE550087EB43 /* Embed Frameworks */ = {
@@ -54,7 +42,6 @@
 		C403B1221E7CD57500929E09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C403B1251E7CD57500929E09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C403B1271E7CD57500929E09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C403B12C1E7CD57500929E09 /* CatDogBabyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatDogBabyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C403B1301E7CD57500929E09 /* CatDogBabyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDogBabyTests.swift; sourceTree = "<group>"; };
 		C403B1321E7CD57500929E09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C42DDD001E7DF4CA0087EB43 /* Animal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
@@ -66,7 +53,6 @@
 		C4EEA5641E7DE80F00650E2E /* CloseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		CB380B8AE5D167E5E1B1C638 /* Pods-CatDogBabyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatDogBabyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CatDogBabyTests/Pods-CatDogBabyTests.release.xcconfig"; sourceTree = "<group>"; };
 		DA6A7EA1D510BC04FCEA4C07 /* Pods-CatDogBaby.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatDogBaby.release.xcconfig"; path = "Pods/Target Support Files/Pods-CatDogBaby/Pods-CatDogBaby.release.xcconfig"; sourceTree = "<group>"; };
-		DD4B8D9B39BB92B5262F3389 /* Pods_CatDogBabyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatDogBabyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,14 +64,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C403B1291E7CD57500929E09 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C2BBD49C828ECFC0ECE2E300 /* Pods_CatDogBabyTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -93,7 +71,6 @@
 			isa = PBXGroup;
 			children = (
 				ADA7DE533488DDDB5E7DC372 /* Pods_CatDogBaby.framework */,
-				DD4B8D9B39BB92B5262F3389 /* Pods_CatDogBabyTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -113,7 +90,6 @@
 			isa = PBXGroup;
 			children = (
 				C403B1181E7CD57500929E09 /* CatDogBaby.app */,
-				C403B12C1E7CD57500929E09 /* CatDogBabyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -220,27 +196,6 @@
 			productReference = C403B1181E7CD57500929E09 /* CatDogBaby.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C403B12B1E7CD57500929E09 /* CatDogBabyTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C403B1381E7CD57500929E09 /* Build configuration list for PBXNativeTarget "CatDogBabyTests" */;
-			buildPhases = (
-				FFFC09AFE8B0A6FCF2A9DE6A /* [CP] Check Pods Manifest.lock */,
-				C403B1281E7CD57500929E09 /* Sources */,
-				C403B1291E7CD57500929E09 /* Frameworks */,
-				C403B12A1E7CD57500929E09 /* Resources */,
-				5E5AEEC452D4B16C36559E5E /* [CP] Embed Pods Frameworks */,
-				4B1B01105B951E195D12DEDC /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C403B12E1E7CD57500929E09 /* PBXTargetDependency */,
-			);
-			name = CatDogBabyTests;
-			productName = CatDogBabyTests;
-			productReference = C403B12C1E7CD57500929E09 /* CatDogBabyTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -255,12 +210,6 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 49E6AM57U3;
 						ProvisioningStyle = Automatic;
-					};
-					C403B12B1E7CD57500929E09 = {
-						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = TWPE6ND5AF;
-						ProvisioningStyle = Automatic;
-						TestTargetID = C403B1171E7CD57400929E09;
 					};
 				};
 			};
@@ -278,7 +227,6 @@
 			projectRoot = "";
 			targets = (
 				C403B1171E7CD57400929E09 /* CatDogBaby */,
-				C403B12B1E7CD57500929E09 /* CatDogBabyTests */,
 			);
 		};
 /* End PBXProject section */
@@ -290,13 +238,6 @@
 			files = (
 				C403B1261E7CD57500929E09 /* LaunchScreen.storyboard in Resources */,
 				C403B1231E7CD57500929E09 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C403B12A1E7CD57500929E09 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,52 +274,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CatDogBaby/Pods-CatDogBaby-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4B1B01105B951E195D12DEDC /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CatDogBabyTests/Pods-CatDogBabyTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5E5AEEC452D4B16C36559E5E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CatDogBabyTests/Pods-CatDogBabyTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		743E2184438708D6CC4861B7 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		FFFC09AFE8B0A6FCF2A9DE6A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -411,23 +307,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C403B1281E7CD57500929E09 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C403B1311E7CD57500929E09 /* CatDogBabyTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		C403B12E1E7CD57500929E09 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C403B1171E7CD57400929E09 /* CatDogBaby */;
-			targetProxy = C403B12D1E7CD57500929E09 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C403B1241E7CD57500929E09 /* LaunchScreen.storyboard */ = {
@@ -570,38 +450,6 @@
 			};
 			name = Release;
 		};
-		C403B1391E7CD57500929E09 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6C7D7719448357F105B123F8 /* Pods-CatDogBabyTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = TWPE6ND5AF;
-				INFOPLIST_FILE = CatDogBabyTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.WilliamRobinson.CatDogBabyTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CatDogBaby.app/CatDogBaby";
-			};
-			name = Debug;
-		};
-		C403B13A1E7CD57500929E09 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CB380B8AE5D167E5E1B1C638 /* Pods-CatDogBabyTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = TWPE6ND5AF;
-				INFOPLIST_FILE = CatDogBabyTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.WilliamRobinson.CatDogBabyTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CatDogBaby.app/CatDogBaby";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -619,15 +467,6 @@
 			buildConfigurations = (
 				C403B1361E7CD57500929E09 /* Debug */,
 				C403B1371E7CD57500929E09 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C403B1381E7CD57500929E09 /* Build configuration list for PBXNativeTarget "CatDogBabyTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C403B1391E7CD57500929E09 /* Debug */,
-				C403B13A1E7CD57500929E09 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
