@@ -7,5 +7,5 @@
 //
 
 class Secret {
-	static let googleAPIKey: String = "AIzaSyDJWWoRaZsuLO5FteSCIsyGa-y128jwgnA"
+	static let googleAPIKey: String = "AIzaSyAWE4P5nSh86VoGjL8lnsAUjTOHibeHsh4"
 }

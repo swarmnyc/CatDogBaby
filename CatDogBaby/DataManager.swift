@@ -46,6 +46,7 @@ class DataManager {
 					}
 					return
 				}
+				print(JSON(data: data))
 				let labelAnnotations: JSON = JSON(data: data)["responses"][0]["labelAnnotations"]
 				guard !labelAnnotations.isEmpty else {
 					DispatchQueue.main.async {
@@ -82,7 +83,10 @@ class DataManager {
 				return .cat
 			} else if label.contains("dog") {
 				return .dog
-			} else if label.contains("hair") {
+			} else if label.contains("baby") || label.contains("child")
+				  || label.contains("human") || label.contains("person") {
+				return .baby
+			} else if label.contains("old") {
 				return .biggestBaby
 			}
 		}
@@ -91,7 +95,7 @@ class DataManager {
 	
 	/// Downsizes images before making request against Google Vision API
 	func resize(image: UIImage) -> Data {
-		let size: CGSize = CGSize(width: 200, height: image.size.height / image.size.width * 200)
+		let size: CGSize = CGSize(width: 150, height: image.size.height / image.size.width * 150)
 		UIGraphicsBeginImageContext(size)
 		image.draw(in: CGRect(x: 0, y: 0, width: size.width, height: size.height))
 		let resizedImageData: Data = UIImagePNGRepresentation(UIGraphicsGetImageFromCurrentImageContext()!)!

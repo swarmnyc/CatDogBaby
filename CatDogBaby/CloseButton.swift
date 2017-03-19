@@ -25,9 +25,9 @@ class CloseButton: UIButton {
 	// Drawing
 	override func draw(_ rect: CGRect) {
 		if animalIdentificationDelegate.isIdentifying {
-			StyleKit.drawCloseButton(scale: 0.7, rotation: 0)
+			StyleKit.drawCloseButton(scaleCloseButton: 0.7, rotation: 0)
 		} else {
-			StyleKit.drawCloseButton(scale: 1, rotation: 0)
+			StyleKit.drawCloseButton(scaleCloseButton: 1, rotation: 0)
 		}
 	}
 }

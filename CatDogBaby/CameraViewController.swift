@@ -11,17 +11,23 @@ import SnapKit
 import SwiftyCam
 import AVFoundation
 
+/// Defines the possible states during photo capture process
+protocol CaptureProtocol {
+	var isCaptureTouchDown: Bool { get }
+}
+
 /// Defines the possible states during animal identification process
 protocol AnimalIdentificationProtocol {
 	var isIdentifying: Bool { get }
 }
 
 /// Main application view controller
-class CameraViewController: SwiftyCamViewController, AnimalIdentificationProtocol {
+class CameraViewController: SwiftyCamViewController, CaptureProtocol, AnimalIdentificationProtocol {
 	
 	// Views
 	lazy var captureButton: CaptureButton = {
-		let button: CaptureButton = CaptureButton()
+		let button: CaptureButton = CaptureButton(self)
+		button.addTarget(self, action: #selector(captureTouchDown), for: .touchDown)
 		button.addTarget(self, action: #selector(capturePhoto), for: .touchUpInside)
 		self.view.addSubview(button)
 		return button
@@ -112,6 +118,11 @@ class CameraViewController: SwiftyCamViewController, AnimalIdentificationProtoco
 	lazy var speechSynthesizer: AVSpeechSynthesizer = AVSpeechSynthesizer()
 	
 	// Status
+	var isCaptureTouchDown: Bool = false {
+		didSet {
+			captureButton.setUpAnimation()
+		}
+	}
 	var isIdentifying: Bool = true {
 		didSet {
 			closeButton.setNeedsDisplay()
@@ -162,12 +173,20 @@ class CameraViewController: SwiftyCamViewController, AnimalIdentificationProtoco
 		super.updateViewConstraints()
 	}
 	
-	// Actions
+	// Set touch down on capture button
+	func captureTouchDown() {
+		isCaptureTouchDown = true
+	}
+	
+	// Touch released on capture button
 	func capturePhoto() {
+		isCaptureTouchDown = false
 		isIdentifying = true
 		captureButton.isUserInteractionEnabled = false
 		takePhoto()
 	}
+	
+	// Touch released on close button
 	func closePopup() {
 		// Stop synthesizer if speaking
 		self.speechSynthesizer.stopSpeaking(at: .immediate)
