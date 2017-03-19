@@ -9,7 +9,12 @@
 import UIKit
 import AVFoundation
 
+enum AnimalType {
+	case cat, dog, baby, biggestBaby
+}
+
 struct Animal {
 	var image: UIImage
 	var utterance: AVSpeechUtterance
+	var description: String
 }

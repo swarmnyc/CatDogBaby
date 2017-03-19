@@ -9,7 +9,25 @@
 import UIKit
 
 class CloseButton: UIButton {
+	
+	// Delegation
+	var animalIdentificationDelegate: AnimalIdentificationProtocol
+	
+	// Initialization
+	init(_ animalIdentificationDelegate: AnimalIdentificationProtocol) {
+		self.animalIdentificationDelegate = animalIdentificationDelegate
+		super.init(frame: CGRect.zero)
+	}
+	required init?(coder aDecoder: NSCoder) {
+		fatalError()
+	}
+	
+	// Drawing
 	override func draw(_ rect: CGRect) {
-		StyleKit.drawCloseButton()
+		if animalIdentificationDelegate.isIdentifying {
+			StyleKit.drawCloseButton(scale: 0.7, rotation: 0)
+		} else {
+			StyleKit.drawCloseButton(scale: 1, rotation: 0)
+		}
 	}
 }

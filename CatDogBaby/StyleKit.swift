@@ -15,22 +15,24 @@ import UIKit
 
 public class StyleKit : NSObject {
 
+    //// Cache
+
+    private struct Cache {
+        static let transparentWhite: UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 0.338)
+        static let transparentGray: UIColor = UIColor(red: 0.251, green: 0.232, blue: 0.232, alpha: 0.433)
+    }
+
+    //// Colors
+
+    public dynamic class var transparentWhite: UIColor { return Cache.transparentWhite }
+    public dynamic class var transparentGray: UIColor { return Cache.transparentGray }
+
     //// Drawing Methods
 
-    public dynamic class func drawShutterButton(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 100, height: 100), resizing: ResizingBehavior = .aspectFit) {
+    public dynamic class func drawShutterButton() {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()!
-        
-        //// Resize to Target Frame
-        context.saveGState()
-        let resizedFrame: CGRect = resizing.apply(rect: CGRect(x: 0, y: 0, width: 100, height: 100), target: targetFrame)
-        context.translateBy(x: resizedFrame.minX, y: resizedFrame.minY)
-        context.scaleBy(x: resizedFrame.width / 100, y: resizedFrame.height / 100)
-        let resizedShadowScale: CGFloat = min(resizedFrame.width / 100, resizedFrame.height / 100)
 
-
-        //// Color Declarations
-        let transparentWhite = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 0.338)
 
         //// Shadow Declarations
         let captureButtonOuterShadow = NSShadow()
@@ -44,7 +46,7 @@ public class StyleKit : NSObject {
 
         //// Oval Drawing
         let ovalPath = UIBezierPath(ovalIn: CGRect(x: 13.5, y: 14, width: 72.5, height: 72.5))
-        transparentWhite.setFill()
+        StyleKit.transparentWhite.setFill()
         ovalPath.fill()
 
         ////// Oval Inner Shadow
@@ -54,7 +56,7 @@ public class StyleKit : NSObject {
         context.setAlpha((captureButtonInnerShadow.shadowColor as! UIColor).cgColor.alpha)
         context.beginTransparencyLayer(auxiliaryInfo: nil)
         let ovalOpaqueShadow = (captureButtonInnerShadow.shadowColor as! UIColor).withAlphaComponent(1)
-        context.setShadow(offset: CGSize(width: captureButtonInnerShadow.shadowOffset.width * resizedShadowScale, height: captureButtonInnerShadow.shadowOffset.height * resizedShadowScale), blur: captureButtonInnerShadow.shadowBlurRadius * resizedShadowScale, color: ovalOpaqueShadow.cgColor)
+        context.setShadow(offset: captureButtonInnerShadow.shadowOffset, blur: captureButtonInnerShadow.shadowBlurRadius, color: ovalOpaqueShadow.cgColor)
         context.setBlendMode(.sourceOut)
         context.beginTransparencyLayer(auxiliaryInfo: nil)
 
@@ -66,108 +68,59 @@ public class StyleKit : NSObject {
         context.restoreGState()
 
         context.saveGState()
-        context.setShadow(offset: CGSize(width: captureButtonOuterShadow.shadowOffset.width * resizedShadowScale, height: captureButtonOuterShadow.shadowOffset.height * resizedShadowScale), blur: captureButtonOuterShadow.shadowBlurRadius * resizedShadowScale, color: (captureButtonOuterShadow.shadowColor as! UIColor).cgColor)
+        context.setShadow(offset: captureButtonOuterShadow.shadowOffset, blur: captureButtonOuterShadow.shadowBlurRadius, color: (captureButtonOuterShadow.shadowColor as! UIColor).cgColor)
         UIColor.white.setStroke()
         ovalPath.lineWidth = 8
         ovalPath.stroke()
         context.restoreGState()
-        
-        context.restoreGState()
-
     }
 
-    public dynamic class func drawCloseButton(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 60, height: 70), resizing: ResizingBehavior = .aspectFit) {
+    public dynamic class func drawCloseButton(scale: CGFloat = 1, rotation: CGFloat = 0) {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()!
-        
-        //// Resize to Target Frame
-        context.saveGState()
-        let resizedFrame: CGRect = resizing.apply(rect: CGRect(x: 0, y: 0, width: 60, height: 70), target: targetFrame)
-        context.translateBy(x: resizedFrame.minX, y: resizedFrame.minY)
-        context.scaleBy(x: resizedFrame.width / 60, y: resizedFrame.height / 70)
-        let resizedShadowScale: CGFloat = min(resizedFrame.width / 60, resizedFrame.height / 70)
-
 
         //// Color Declarations
         let white = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000)
 
         //// Shadow Declarations
         let closeShadow = NSShadow()
-        closeShadow.shadowColor = UIColor.black.withAlphaComponent(0.8)
+        closeShadow.shadowColor = UIColor.black.withAlphaComponent(0.5)
         closeShadow.shadowOffset = CGSize(width: 0, height: 0)
         closeShadow.shadowBlurRadius = 6
 
+        //// Variable Declarations
+        let scaleAspect: CGFloat = scale
+
         //// Bezier Drawing
         context.saveGState()
-        context.translateBy(x: 30, y: 35)
+        context.translateBy(x: 35, y: 45)
+        context.rotate(by: -rotation * CGFloat.pi/180)
+        context.scaleBy(x: scale, y: scaleAspect)
 
         let bezierPath = UIBezierPath()
-        bezierPath.move(to: CGPoint(x: 9.05, y: -10))
-        bezierPath.addLine(to: CGPoint(x: 10, y: -9.05))
-        bezierPath.addCurve(to: CGPoint(x: 0.95, y: -0), controlPoint1: CGPoint(x: 10, y: -9.05), controlPoint2: CGPoint(x: 5.55, y: -4.6))
-        bezierPath.addCurve(to: CGPoint(x: 10, y: 9.05), controlPoint1: CGPoint(x: 5.55, y: 4.6), controlPoint2: CGPoint(x: 10, y: 9.05))
-        bezierPath.addLine(to: CGPoint(x: 9.05, y: 10))
-        bezierPath.addCurve(to: CGPoint(x: 0, y: 0.95), controlPoint1: CGPoint(x: 9.05, y: 10), controlPoint2: CGPoint(x: 4.6, y: 5.55))
-        bezierPath.addCurve(to: CGPoint(x: -9.05, y: 10), controlPoint1: CGPoint(x: -4.6, y: 5.55), controlPoint2: CGPoint(x: -9.05, y: 10))
-        bezierPath.addLine(to: CGPoint(x: -10, y: 9.05))
-        bezierPath.addCurve(to: CGPoint(x: -0.95, y: 0), controlPoint1: CGPoint(x: -10, y: 9.05), controlPoint2: CGPoint(x: -5.55, y: 4.6))
-        bezierPath.addCurve(to: CGPoint(x: -10, y: -9.05), controlPoint1: CGPoint(x: -5.55, y: -4.6), controlPoint2: CGPoint(x: -10, y: -9.05))
-        bezierPath.addLine(to: CGPoint(x: -9.05, y: -10))
-        bezierPath.addCurve(to: CGPoint(x: -0, y: -0.95), controlPoint1: CGPoint(x: -9.05, y: -10), controlPoint2: CGPoint(x: -4.6, y: -5.55))
-        bezierPath.addCurve(to: CGPoint(x: 9.05, y: -10), controlPoint1: CGPoint(x: 3.39, y: -4.34), controlPoint2: CGPoint(x: 9.05, y: -10))
-        bezierPath.addLine(to: CGPoint(x: 9.05, y: -10))
+        bezierPath.move(to: CGPoint(x: 8.14, y: -9))
+        bezierPath.addLine(to: CGPoint(x: 9, y: -8.14))
+        bezierPath.addCurve(to: CGPoint(x: 0.86, y: -0), controlPoint1: CGPoint(x: 9, y: -8.14), controlPoint2: CGPoint(x: 5, y: -4.14))
+        bezierPath.addCurve(to: CGPoint(x: 9, y: 8.14), controlPoint1: CGPoint(x: 5, y: 4.14), controlPoint2: CGPoint(x: 9, y: 8.14))
+        bezierPath.addLine(to: CGPoint(x: 8.14, y: 9))
+        bezierPath.addCurve(to: CGPoint(x: 0, y: 0.86), controlPoint1: CGPoint(x: 8.14, y: 9), controlPoint2: CGPoint(x: 4.14, y: 5))
+        bezierPath.addCurve(to: CGPoint(x: -8.14, y: 9), controlPoint1: CGPoint(x: -4.14, y: 5), controlPoint2: CGPoint(x: -8.14, y: 9))
+        bezierPath.addLine(to: CGPoint(x: -9, y: 8.14))
+        bezierPath.addCurve(to: CGPoint(x: -0.86, y: 0), controlPoint1: CGPoint(x: -9, y: 8.14), controlPoint2: CGPoint(x: -5, y: 4.14))
+        bezierPath.addCurve(to: CGPoint(x: -9, y: -8.14), controlPoint1: CGPoint(x: -5, y: -4.14), controlPoint2: CGPoint(x: -9, y: -8.14))
+        bezierPath.addLine(to: CGPoint(x: -8.14, y: -9))
+        bezierPath.addCurve(to: CGPoint(x: -0, y: -0.86), controlPoint1: CGPoint(x: -8.14, y: -9), controlPoint2: CGPoint(x: -4.14, y: -5))
+        bezierPath.addCurve(to: CGPoint(x: 8.14, y: -9), controlPoint1: CGPoint(x: 3.05, y: -3.9), controlPoint2: CGPoint(x: 8.14, y: -9))
+        bezierPath.addLine(to: CGPoint(x: 8.14, y: -9))
         bezierPath.close()
         context.saveGState()
-        context.setShadow(offset: CGSize(width: closeShadow.shadowOffset.width * resizedShadowScale, height: closeShadow.shadowOffset.height * resizedShadowScale), blur: closeShadow.shadowBlurRadius * resizedShadowScale, color: (closeShadow.shadowColor as! UIColor).cgColor)
+        context.setShadow(offset: closeShadow.shadowOffset, blur: closeShadow.shadowBlurRadius, color: (closeShadow.shadowColor as! UIColor).cgColor)
         white.setFill()
         bezierPath.fill()
         context.restoreGState()
 
 
         context.restoreGState()
-        
-        context.restoreGState()
-
     }
 
-
-
-
-    @objc public enum ResizingBehavior: Int {
-        case aspectFit /// The content is proportionally resized to fit into the target rectangle.
-        case aspectFill /// The content is proportionally resized to completely fill the target rectangle.
-        case stretch /// The content is stretched to match the entire target rectangle.
-        case center /// The content is centered in the target rectangle, but it is NOT resized.
-
-        public func apply(rect: CGRect, target: CGRect) -> CGRect {
-            if rect == target || target == CGRect.zero {
-                return rect
-            }
-
-            var scales = CGSize.zero
-            scales.width = abs(target.width / rect.width)
-            scales.height = abs(target.height / rect.height)
-
-            switch self {
-                case .aspectFit:
-                    scales.width = min(scales.width, scales.height)
-                    scales.height = scales.width
-                case .aspectFill:
-                    scales.width = max(scales.width, scales.height)
-                    scales.height = scales.width
-                case .stretch:
-                    break
-                case .center:
-                    scales.width = 1
-                    scales.height = 1
-            }
-
-            var result = rect.standardized
-            result.size.width *= scales.width
-            result.size.height *= scales.height
-            result.origin.x = target.minX + (target.width - result.width) / 2
-            result.origin.y = target.minY + (target.height - result.height) / 2
-            return result
-        }
-    }
 }

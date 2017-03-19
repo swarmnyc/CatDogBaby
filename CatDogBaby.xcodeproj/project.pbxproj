@@ -12,8 +12,6 @@
 		C403B1231E7CD57500929E09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C403B1221E7CD57500929E09 /* Assets.xcassets */; };
 		C403B1261E7CD57500929E09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C403B1241E7CD57500929E09 /* LaunchScreen.storyboard */; };
 		C403B1311E7CD57500929E09 /* CatDogBabyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C403B1301E7CD57500929E09 /* CatDogBabyTests.swift */; };
-		C42DDCFA1E7DEE550087EB43 /* Telekinesis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C42DDCF81E7DEE2D0087EB43 /* Telekinesis.framework */; };
-		C42DDCFB1E7DEE550087EB43 /* Telekinesis.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C42DDCF81E7DEE2D0087EB43 /* Telekinesis.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C42DDD011E7DF4CA0087EB43 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42DDD001E7DF4CA0087EB43 /* Animal.swift */; };
 		C42DDD061E7E00370087EB43 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42DDD051E7E00370087EB43 /* DataManager.swift */; };
 		C42DDD081E7E00540087EB43 /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42DDD071E7E00540087EB43 /* Secret.swift */; };
@@ -41,7 +39,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C42DDCFB1E7DEE550087EB43 /* Telekinesis.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -60,7 +57,6 @@
 		C403B12C1E7CD57500929E09 /* CatDogBabyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatDogBabyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C403B1301E7CD57500929E09 /* CatDogBabyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDogBabyTests.swift; sourceTree = "<group>"; };
 		C403B1321E7CD57500929E09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C42DDCF81E7DEE2D0087EB43 /* Telekinesis.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Telekinesis.framework; path = Frameworks/Telekinesis.framework; sourceTree = "<group>"; };
 		C42DDD001E7DF4CA0087EB43 /* Animal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		C42DDD051E7E00370087EB43 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		C42DDD071E7E00540087EB43 /* Secret.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
@@ -79,7 +75,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E03B2D9CE7EBE7713E2B43CB /* Pods_CatDogBaby.framework in Frameworks */,
-				C42DDCFA1E7DEE550087EB43 /* Telekinesis.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,7 +92,6 @@
 		43406F81244864E7BA2DDF94 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C42DDCF81E7DEE2D0087EB43 /* Telekinesis.framework */,
 				ADA7DE533488DDDB5E7DC372 /* Pods_CatDogBaby.framework */,
 				DD4B8D9B39BB92B5262F3389 /* Pods_CatDogBabyTests.framework */,
 			);
@@ -259,7 +253,7 @@
 				TargetAttributes = {
 					C403B1171E7CD57400929E09 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = TWPE6ND5AF;
+						DevelopmentTeam = 49E6AM57U3;
 						ProvisioningStyle = Automatic;
 					};
 					C403B12B1E7CD57500929E09 = {
@@ -545,14 +539,14 @@
 			baseConfigurationReference = 809DB891FA34242F8A7E9057 /* Pods-CatDogBaby.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = TWPE6ND5AF;
+				DEVELOPMENT_TEAM = 49E6AM57U3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = CatDogBaby/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.WilliamRobinson.CatDogBaby;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SWARMNYC.CatDogBaby;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -563,14 +557,14 @@
 			baseConfigurationReference = DA6A7EA1D510BC04FCEA4C07 /* Pods-CatDogBaby.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = TWPE6ND5AF;
+				DEVELOPMENT_TEAM = 49E6AM57U3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = CatDogBaby/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.WilliamRobinson.CatDogBaby;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SWARMNYC.CatDogBaby;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
