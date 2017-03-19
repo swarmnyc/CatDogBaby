@@ -183,9 +183,9 @@
 				C403B1141E7CD57400929E09 /* Sources */,
 				C403B1151E7CD57400929E09 /* Frameworks */,
 				C403B1161E7CD57400929E09 /* Resources */,
-				328E627BCB22D61565069230 /* [CP] Embed Pods Frameworks */,
-				39E849629739F566BFC071BE /* [CP] Copy Pods Resources */,
 				C42DDCFC1E7DEE550087EB43 /* Embed Frameworks */,
+				BF56CA2A45E9DE8E66760423 /* [CP] Embed Pods Frameworks */,
+				6877E688B0D1FC39562362B4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -244,22 +244,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		328E627BCB22D61565069230 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CatDogBaby/Pods-CatDogBaby-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		39E849629739F566BFC071BE /* [CP] Copy Pods Resources */ = {
+		6877E688B0D1FC39562362B4 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -287,6 +272,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BF56CA2A45E9DE8E66760423 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CatDogBaby/Pods-CatDogBaby-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
